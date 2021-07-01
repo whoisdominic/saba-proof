@@ -21,6 +21,7 @@ export default function Home() {
               type: "app/setGreeting",
               payload: {},
             });
+            window.navigator.vibrate(500);
           }}
           className={styles.title}
         >

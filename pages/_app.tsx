@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import AppModel from "../store";
 import { Provider } from "react-redux";
-import { createLogger } from "redux-logger";
 import { create } from "../saba/src/index";
 
 /**
@@ -12,7 +11,6 @@ const options = {
   initialState: {},
   // All of our models go in the array below
   models: [AppModel],
-  onAction: [createLogger()],
   onError(e: any) {
     console.log("====================================");
     console.error(e);
